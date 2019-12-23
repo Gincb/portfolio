@@ -1,0 +1,81 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.text {
+    margin: 0 1em;
+}
+
+.top {
+    margin: 2em 2em;
+}
+
+.logo {
+    width: 10em;
+    float: right;
+}
+
+.header {
+    margin: 0;
+    width: 80%;
+    font-size: 5em;
+    font-weight: 600;
+    line-height: 1em;
+    border-bottom: 5px double black;
+}
+
+.introduction {
+    display: grid;
+    grid-template-columns: 2em 40vw 45vw 10vw 2em;
+    grid-template-rows: 70vh;
+    grid-template-areas: ". introphoto intro introside .";
+    padding: 1em 0;
+}
+
+.intro-photo {
+    grid-area: introphoto;
+    background-color: aquamarine;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.intro {
+    grid-area: intro;
+    border-bottom: 5px double black;
+}
+
+.intro-side {
+    grid-area: introside;
+    writing-mode: vertical-rl;
+    margin: auto;
+}
+
+.basic-web {
+    display: grid;
+    grid-template-columns: 2em 10vw 30vw 45vw 10vw 2em;
+    grid-template-rows: 80vh;
+    grid-template-areas: ". basicside basicphoto basictext . .";
+    margin: 2em 0;
+}
+
+.basic-side {
+    grid-area: basicside;
+    font-family: 'Megrim', cursive;
+    writing-mode: vertical-rl;
+    padding: 0;
+    font-size: 2em;
+    text-align: center;
+    line-height: 0;
+}
+
+.basic-photo {
+    grid-area: basicphoto;
+    background-color: bisque;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.basic-text {
+    grid-area: basictext;
+}
