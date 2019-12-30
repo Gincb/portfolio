@@ -1,5 +1,11 @@
 body {
+    margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
+}
+
+.border {
+    border-bottom: 7px #2c2c2c solid;
 }
 
 .text {
@@ -7,12 +13,7 @@ body {
 }
 
 .top {
-    margin: 2em 2em;
-}
-
-.logo {
-    width: 10em;
-    float: right;
+    margin: 2em 2em 4em;
 }
 
 .header {
@@ -21,52 +22,100 @@ body {
     font-size: 5em;
     font-weight: 600;
     line-height: 1em;
-    border-bottom: 5px double black;
+    color: #2c2c2c;
 }
+
+.landing-page {
+    position: relative;
+    height: 100%;
+    z-index: 2;
+}
+
+.landing {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../assets/landing.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.header-landing {
+    position: relative;
+    top: 40%;
+    left: 50%;
+    height: 100vh;
+    min-height: 25rem;
+    width: 100%;
+    font-size: 3em;
+    overflow: hidden;
+}
+
+
+/* Grids */
 
 .introduction {
     display: grid;
-    grid-template-columns: 2em 40vw 45vw 10vw 2em;
-    grid-template-rows: 70vh;
-    grid-template-areas: ". introphoto intro introside .";
     padding: 1em 0;
+    grid-template-columns: 2em 5vw 45vw 45vw 2em;
+    grid-template-rows: 85vh;
+    grid-template-areas: ". introside introphoto intro .";
 }
 
 .intro-photo {
     grid-area: introphoto;
-    background-color: aquamarine;
+    background-image: url("../assets/photo.jpeg");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    filter: grayscale(70%);
 }
 
 .intro {
     grid-area: intro;
-    border-bottom: 5px double black;
+}
+
+.intro h2 {
+    font-size: 3.5em;
+    color: #b8b8b8;
+}
+
+.intro p {
+    font-size: 1.5em;
+    font-weight: 300;
+    font-style: italic;
 }
 
 .intro-side {
     grid-area: introside;
-    writing-mode: vertical-rl;
+    font-family: 'Megrim', cursive;
+}
+
+.side {
+    padding: 0;
     margin: auto;
+    writing-mode: vertical-rl;
+    font-size: 2em;
+    line-height: 0;
 }
 
 .basic-web {
     display: grid;
-    grid-template-columns: 2em 10vw 30vw 45vw 10vw 2em;
-    grid-template-rows: 80vh;
-    grid-template-areas: ". basicside basicphoto basictext . .";
+    grid-template-columns: 2em 5vw 35vw 45vw 10vw 2em;
+    grid-template-rows: 80vh 80vh;
+    grid-template-areas: ". basicside basicphoto basicphoto webside ." ". . basictext basictext . .";
     margin: 2em 0;
 }
 
 .basic-side {
     grid-area: basicside;
     font-family: 'Megrim', cursive;
-    writing-mode: vertical-rl;
-    padding: 0;
-    font-size: 2em;
-    text-align: center;
-    line-height: 0;
+}
+
+.web-right-side {
+    grid-area: webside;
 }
 
 .basic-photo {
@@ -78,4 +127,153 @@ body {
 
 .basic-text {
     grid-area: basictext;
+}
+
+.basic-ux {
+    display: grid;
+    grid-template-columns: 2em 5vw 35vw 45vw 10vw 2em;
+    grid-template-rows: 80vh 80vh 80vh;
+    grid-template-areas: ". uxside dataphoto datatext dataside ." ". . protphoto prottext protside ." ". . sprintphoto sprinttext sprintside .";
+    grid-row-gap: 2em;
+    margin: 4em 0;
+}
+
+.ux-side {
+    grid-area: uxside;
+    font-family: 'Megrim', cursive;
+}
+
+.data-photo {
+    grid-area: dataphoto;
+    background-color: palevioletred;
+}
+
+.data-text {
+    grid-area: datatext;
+}
+
+.data-right-side {
+    grid-area: dataside;
+}
+
+.prot-photo {
+    grid-area: protphoto;
+    background-color: silver;
+}
+
+.prot-text {
+    grid-area: prottext;
+}
+
+.prot-right-side {
+    grid-area: protside;
+}
+
+.sprint-photo {
+    grid-area: sprintphoto;
+    background-color: thistle;
+}
+
+.sprint-text {
+    grid-area: sprinttext;
+}
+
+.sprint-right-side {
+    grid-area: sprintside;
+}
+
+.animation {
+    display: grid;
+    grid-template-columns: 2em 5vw 35vw 45vw 10vw 2em;
+    grid-template-rows: 80vh 80vh 80vh 80vh 80vh 80vh;
+    grid-template-areas: ". animationside spritephoto spritephoto spriteside ." ". . spritetext spritetext . ." ". . jsphoto jstext jsside ." ". pooloneside poolonetext pooltwotext pooltwoside ." ". . onboardingphoto onboardingphoto onboardingside ." ". . onboardingtext onboardingtext . .";
+    grid-row-gap: 2em;
+    margin: 4em 0;
+}
+
+.animation-side {
+    grid-area: animationside;
+    font-family: 'Megrim', cursive;
+}
+
+.sprite-photo {
+    grid-area: spritephoto;
+    background-color: honeydew;
+}
+
+.sprite-text {
+    grid-area: spritetext;
+}
+
+.sprite-right-side {
+    grid-area: spriteside;
+}
+
+.js-photo {
+    grid-area: jsphoto;
+    background-color: tan;
+}
+
+.js-text {
+    grid-area: jstext;
+}
+
+.js-right-side {
+    grid-area: jsside;
+}
+
+.pool-one-side {
+    grid-area: pooloneside;
+}
+
+.pool-one-text {
+    grid-area: poolonetext;
+}
+
+.pool-two-text {
+    grid-area: pooltwotext;
+}
+
+.pool-two-side {
+    grid-area: pooltwoside;
+}
+
+.onboarding-photo {
+    grid-area: onboardingphoto;
+    background-color: lavender;
+}
+
+.onboarding-text {
+    grid-area: onboardingtext;
+}
+
+.onboarding-right-side {
+    grid-area: onboardingside;
+}
+
+.basic-content {
+    display: grid;
+    grid-template-columns: 2em 5vw 35vw 45vw 10vw 2em;
+    grid-template-rows: 80vh 80vh;
+    grid-template-areas: ". contentside foodsharingphoto foodsharingphoto foodsharingside ." ". . foodsharingtext foodsharingtext . .";
+    grid-row-gap: 2em;
+    margin: 4em 0;
+}
+
+.content-side {
+    grid-area: contentside;
+    font-family: 'Megrim', cursive;
+}
+
+.foodsharing-photo {
+    grid-area: foodsharingphoto;
+    background-color: lightseagreen;
+}
+
+.foodsharing-text {
+    grid-area: foodsharingtext;
+}
+
+.foodsharing-right-side {
+    grid-area: foodsharingside;
 }
