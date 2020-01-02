@@ -76,6 +76,9 @@ body {
 
 /* Grids */
 
+
+/* Profile */
+
 .introduction {
     display: grid;
     padding: 1em 0;
@@ -121,6 +124,9 @@ body {
     line-height: 0;
 }
 
+
+/* Portfolio */
+
 .basic-web {
     display: grid;
     grid-template-columns: 2em 5vw 35vw 45vw 10vw 2em;
@@ -140,9 +146,11 @@ body {
 
 .basic-photo {
     grid-area: basicphoto;
-    background-color: bisque;
-    background-size: cover;
+    background-image: url("../assets/swissstyle.PNG");
+    background-size: contain;
+    background-position: center;
     background-repeat: no-repeat;
+    filter: grayscale(50%);
 }
 
 .basic-text {
@@ -152,8 +160,8 @@ body {
 .basic-ux {
     display: grid;
     grid-template-columns: 2em 5vw 35vw 45vw 10vw 2em;
-    grid-template-rows: 80vh 80vh 80vh;
-    grid-template-areas: ". uxside dataphoto datatext dataside ." ". . protphoto prottext protside ." ". . sprintphoto sprinttext sprintside .";
+    grid-template-rows: 80vh 80vh 80vh 80vh;
+    grid-template-areas: ". uxside dataonetext datatwotext dataside ." ". . protphoto protphoto protside ." ". . prottext prottext protside ." ". . sprintphoto sprinttext sprintside .";
     grid-row-gap: 2em;
     margin: 4em 0;
 }
@@ -163,13 +171,12 @@ body {
     font-family: 'Megrim', cursive;
 }
 
-.data-photo {
-    grid-area: dataphoto;
-    background-color: palevioletred;
+.data-one-text {
+    grid-area: dataonetext;
 }
 
-.data-text {
-    grid-area: datatext;
+.data-two-text {
+    grid-area: datatwotext;
 }
 
 .data-right-side {
@@ -178,7 +185,11 @@ body {
 
 .prot-photo {
     grid-area: protphoto;
-    background-color: silver;
+    background-image: url("../assets/prototype.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(50%);
 }
 
 .prot-text {
@@ -191,7 +202,11 @@ body {
 
 .sprint-photo {
     grid-area: sprintphoto;
-    background-color: thistle;
+    background-image: url("../assets/design-sprint.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(50%);
 }
 
 .sprint-text {
@@ -206,7 +221,7 @@ body {
     display: grid;
     grid-template-columns: 2em 5vw 35vw 45vw 10vw 2em;
     grid-template-rows: 80vh 80vh 80vh 80vh 80vh 80vh;
-    grid-template-areas: ". animationside spritephoto spritephoto spriteside ." ". . spritetext spritetext . ." ". . jsphoto jstext jsside ." ". pooloneside poolonetext pooltwotext pooltwoside ." ". . onboardingphoto onboardingphoto onboardingside ." ". . onboardingtext onboardingtext . .";
+    grid-template-areas: ". animationside spritephoto spritephoto spriteside ." ". . spritetext spritetext . ." ". . jsonetext jstwotext jsside ." ". pooloneside poolonetext pooltwotext pooltwoside ." ". . onboardingphoto onboardingphoto onboardingside ." ". . onboardingtext onboardingtext . .";
     grid-row-gap: 2em;
     margin: 4em 0;
 }
@@ -218,7 +233,11 @@ body {
 
 .sprite-photo {
     grid-area: spritephoto;
-    background-color: honeydew;
+    background-image: url("../assets/spriggan.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(50%);
 }
 
 .sprite-text {
@@ -229,13 +248,12 @@ body {
     grid-area: spriteside;
 }
 
-.js-photo {
-    grid-area: jsphoto;
-    background-color: tan;
+.js-one-text {
+    grid-area: jsonetext;
 }
 
-.js-text {
-    grid-area: jstext;
+.js-two-text {
+    grid-area: jstwotext;
 }
 
 .js-right-side {
@@ -260,7 +278,11 @@ body {
 
 .onboarding-photo {
     grid-area: onboardingphoto;
-    background-color: lavender;
+    background-image: url("../assets/onboarding.PNG");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(50%);
 }
 
 .onboarding-text {
@@ -287,7 +309,11 @@ body {
 
 .foodsharing-photo {
     grid-area: foodsharingphoto;
-    background-color: lightseagreen;
+    background-image: url("../assets/foodsharing.PNG");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(50%);
 }
 
 .foodsharing-text {
