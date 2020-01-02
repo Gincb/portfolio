@@ -1,0 +1,79 @@
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (max-width: 600px) {
+    #menuToggle {
+        right: 1em;
+    }
+    /* Landing */
+    .header-landing {
+        font-size: 2em;
+    }
+    .button {
+        display: block;
+    }
+    .button {
+        background-color: #000000ce;
+        box-shadow: inset 0 0 0 2px #000000;
+        color: white;
+    }
+    /* Profile */
+    .header {
+        font-size: 3em;
+        padding-bottom: 0;
+        line-height: 1.2em;
+    }
+    .introduction {
+        padding: 0;
+        grid-template-columns: auto 95vw auto;
+        grid-template-rows: 80vh 80vh;
+        grid-template-areas: ". introphoto ." ". intro .";
+    }
+    .intro-photo {
+        background-size: cover;
+    }
+    .intro {
+        text-align: center;
+    }
+    .intro h2 {
+        font-size: 2em;
+    }
+    .intro p {
+        font-size: 1em;
+    }
+    .side {
+        display: none;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    /* Landing */
+    .header-landing {
+        font-size: 3em;
+    }
+    .button {
+        background-color: #000000ce;
+        box-shadow: inset 0 0 0 2px #000000;
+        color: white;
+    }
+    /* Profile */
+    .header {
+        font-size: 3em;
+        padding-bottom: 0;
+    }
+    .introduction {
+        padding: 0;
+    }
+    .intro h2 {
+        padding-top: 2em;
+        font-size: 2em;
+    }
+    .intro p {
+        font-size: 1em;
+    }
+    .side {
+        font-size: 1em;
+    }
+}
