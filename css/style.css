@@ -78,6 +78,32 @@ body {
     color: white;
 }
 
+.highlight {
+    border-bottom: 2px #2c2c2c solid;
+}
+
+.link-highlight {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.link-highlight::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #2c2c2c;
+    transition: width 0.5s;
+}
+
+.link-highlight:hover::after {
+    width: 10%;
+}
+
+.grid-bottom-border {
+    box-shadow: 0 8px 6px -6px #b8b8b8;
+}
+
 
 /* Grids */
 
@@ -135,7 +161,7 @@ body {
 .basic-web {
     display: grid;
     grid-template-columns: 2em 5vw 35vw 45vw 10vw 2em;
-    grid-template-rows: 80vh 80vh;
+    grid-template-rows: 80vh 60vh;
     grid-template-areas: ". basicside basicphoto basicphoto webside ." ". . basictext basictext . .";
     margin: 2em 0;
 }
@@ -160,13 +186,14 @@ body {
 
 .basic-text {
     grid-area: basictext;
+    column-count: 2;
 }
 
 .basic-ux {
     display: grid;
     grid-template-columns: 2em 5vw 35vw 45vw 10vw 2em;
-    grid-template-rows: 80vh 80vh 80vh 80vh;
-    grid-template-areas: ". uxside dataonetext datatwotext dataside ." ". . protphoto protphoto protside ." ". . prottext prottext protside ." ". . sprintphoto sprinttext sprintside .";
+    grid-template-rows: 40vh 80vh 60vh 80vh;
+    grid-template-areas: ". uxside datatext datatext dataside ." ". . protphoto protphoto protside ." ". . prottext prottext protside ." ". . sprintphoto sprinttext sprintside .";
     grid-row-gap: 2em;
     margin: 4em 0;
 }
@@ -176,16 +203,18 @@ body {
     font-family: 'Megrim', cursive;
 }
 
-.data-one-text {
-    grid-area: dataonetext;
-}
-
-.data-two-text {
-    grid-area: datatwotext;
+.data-text {
+    grid-area: datatext;
+    column-count: 2;
 }
 
 .data-right-side {
     grid-area: dataside;
+    padding: 0;
+    margin: 0.5em 2.5em;
+    writing-mode: vertical-rl;
+    font-size: 2em;
+    line-height: 0;
 }
 
 .prot-photo {
@@ -199,6 +228,7 @@ body {
 
 .prot-text {
     grid-area: prottext;
+    column-count: 2;
 }
 
 .prot-right-side {
@@ -216,6 +246,7 @@ body {
 
 .sprint-text {
     grid-area: sprinttext;
+    column-count: 2;
 }
 
 .sprint-right-side {
@@ -225,8 +256,8 @@ body {
 .animation {
     display: grid;
     grid-template-columns: 2em 5vw 35vw 45vw 10vw 2em;
-    grid-template-rows: 80vh 80vh 80vh 80vh 80vh 80vh;
-    grid-template-areas: ". animationside spritephoto spritephoto spriteside ." ". . spritetext spritetext . ." ". . jsonetext jstwotext jsside ." ". pooloneside poolonetext pooltwotext pooltwoside ." ". . onboardingphoto onboardingphoto onboardingside ." ". . onboardingtext onboardingtext . .";
+    grid-template-rows: 80vh 60vh 40vh 80vh 80vh 80vh;
+    grid-template-areas: ". animationside spritephoto spritephoto spriteside ." ". . spritetext spritetext . ." ". . jstext jstext jsside ." ". pooloneside pooltext pooltext pooltwoside ." ". . onboardingphoto onboardingphoto onboardingside ." ". . onboardingtext onboardingtext . .";
     grid-row-gap: 2em;
     margin: 4em 0;
 }
@@ -247,34 +278,34 @@ body {
 
 .sprite-text {
     grid-area: spritetext;
+    column-count: 2;
 }
 
 .sprite-right-side {
     grid-area: spriteside;
 }
 
-.js-one-text {
-    grid-area: jsonetext;
-}
-
-.js-two-text {
-    grid-area: jstwotext;
+.js-text {
+    grid-area: jstext;
+    column-count: 2;
 }
 
 .js-right-side {
     grid-area: jsside;
+    padding: 0;
+    margin: 1.5em 2.5em;
+    writing-mode: vertical-rl;
+    font-size: 2em;
+    line-height: 0;
 }
 
 .pool-one-side {
     grid-area: pooloneside;
 }
 
-.pool-one-text {
-    grid-area: poolonetext;
-}
-
-.pool-two-text {
-    grid-area: pooltwotext;
+.pool-text {
+    grid-area: pooltext;
+    column-count: 2;
 }
 
 .pool-two-side {
@@ -292,6 +323,7 @@ body {
 
 .onboarding-text {
     grid-area: onboardingtext;
+    column-count: 2;
 }
 
 .onboarding-right-side {
@@ -301,7 +333,7 @@ body {
 .basic-content {
     display: grid;
     grid-template-columns: 2em 5vw 35vw 45vw 10vw 2em;
-    grid-template-rows: 80vh 80vh;
+    grid-template-rows: 80vh 70vh;
     grid-template-areas: ". contentside foodsharingphoto foodsharingphoto foodsharingside ." ". . foodsharingtext foodsharingtext . .";
     grid-row-gap: 2em;
     margin: 4em 0;
@@ -323,6 +355,7 @@ body {
 
 .foodsharing-text {
     grid-area: foodsharingtext;
+    column-count: 2;
 }
 
 .foodsharing-right-side {
