@@ -16,6 +16,15 @@ body {
     margin: 2em 2em 4em;
 }
 
+.top-header {
+    width: 90vw;
+}
+
+.header-logo {
+    width: 10em;
+    float: right;
+}
+
 .header {
     margin: 0;
     width: 80%;
@@ -87,7 +96,8 @@ body {
     font-weight: 600;
 }
 
-.link-highlight::after {
+.link-highlight::after,
+.link-highlight2::after {
     content: '';
     display: block;
     width: 0;
@@ -97,7 +107,11 @@ body {
 }
 
 .link-highlight:hover::after {
-    width: 10%;
+    width: 20%;
+}
+
+.link-highlight2:hover::after {
+    width: 50%;
 }
 
 .grid-bottom-border {
@@ -192,7 +206,7 @@ body {
 .basic-ux {
     display: grid;
     grid-template-columns: 2em 5vw 35vw 45vw 10vw 2em;
-    grid-template-rows: 40vh 80vh 60vh 80vh;
+    grid-template-rows: 40vh 80vh 60vh 100vh;
     grid-template-areas: ". uxside datatext datatext dataside ." ". . protphoto protphoto protside ." ". . prottext prottext protside ." ". . sprintphoto sprinttext sprintside .";
     grid-row-gap: 2em;
     margin: 4em 0;
@@ -210,17 +224,12 @@ body {
 
 .data-right-side {
     grid-area: dataside;
-    padding: 0;
-    margin: 0.5em 2.5em;
-    writing-mode: vertical-rl;
-    font-size: 2em;
-    line-height: 0;
 }
 
 .prot-photo {
     grid-area: protphoto;
     background-image: url("../assets/prototype.png");
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     filter: grayscale(50%);
@@ -246,7 +255,6 @@ body {
 
 .sprint-text {
     grid-area: sprinttext;
-    column-count: 2;
 }
 
 .sprint-right-side {
@@ -292,11 +300,6 @@ body {
 
 .js-right-side {
     grid-area: jsside;
-    padding: 0;
-    margin: 1.5em 2.5em;
-    writing-mode: vertical-rl;
-    font-size: 2em;
-    line-height: 0;
 }
 
 .pool-one-side {

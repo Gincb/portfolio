@@ -2,7 +2,10 @@
 
 @media only screen and (max-width: 600px) {
     #menuToggle {
-        right: 1em;
+        right: 1.5em;
+    }
+    #menu {
+        width: 20em;
     }
     /* Landing */
     .header-landing {
@@ -15,6 +18,13 @@
         background-color: #000000ce;
         box-shadow: inset 0 0 0 2px #000000;
         color: white;
+    }
+    .side {
+        writing-mode: horizontal-tb;
+        font-size: 2em;
+    }
+    .header-logo {
+        display: none;
     }
     /* Profile */
     .header {
@@ -40,8 +50,44 @@
     .intro p {
         font-size: 1em;
     }
-    .side {
+    .intro-side {
         display: none;
+    }
+    /* Portfolio */
+    .basic-text,
+    .data-text,
+    .prot-text,
+    .sprint-text,
+    .sprite-text,
+    .js-text,
+    .pool-text,
+    .onboarding-text,
+    .foodsharing-text {
+        column-count: 1;
+    }
+    .basic-web {
+        grid-template-columns: 1em 90vw 1em;
+        grid-template-rows: 10vh 40vh 10vh 190vh;
+        grid-template-areas: ". basicside ." ". basicphoto ." ". webside ." ". basictext .";
+    }
+    .basic-ux {
+        grid-template-columns: 1em 90vw 1em;
+        grid-template-rows: 10vh 10vh 125vh 40vh 10vh 180vh 80vh 10vh 180vh;
+        grid-template-areas: ". uxside ." ". dataside ." ". datatext ." ". protphoto ." ". protside ." ". prottext ." ". sprintphoto ." ". sprintside ." ". sprinttext .";
+    }
+    .animation {
+        grid-template-columns: 1em 90vw 1em;
+        grid-template-rows: 10vh 40vh 10vh 175vh 10vh 110vh 10vh 10vh 200vh 40vh 10vh 255vh;
+        grid-template-areas: ". animationside ." ". spritephoto ." ". spriteside ." ". spritetext ." ". jsside ." ". jstext ." ". pooloneside ." ". pooltwoside ." ". pooltext ." ". onboardingphoto ." ". onboardingside ." ". onboardingtext .";
+    }
+    .basic-content {
+        grid-template-columns: 1em 90vw 1em;
+        grid-template-rows: 10vh 40vh 10vh 230vh;
+        grid-template-areas: ". contentside ." ". foodsharingphoto ." ". foodsharingside ." ". foodsharingtext .";
+    }
+    #menu {
+        transform: translate(100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
     }
 }
 
@@ -57,6 +103,9 @@
         background-color: #000000ce;
         box-shadow: inset 0 0 0 2px #000000;
         color: white;
+    }
+    .header-logo {
+        display: none;
     }
     /* Profile */
     .header {
@@ -75,5 +124,39 @@
     }
     .side {
         font-size: 1em;
+    }
+    /* Portfolio */
+    .basic-text,
+    .data-text,
+    .prot-text,
+    .sprint-text,
+    .sprite-text,
+    .js-text,
+    .pool-text,
+    .onboarding-text,
+    .foodsharing-text {
+        column-count: 1;
+    }
+    .basic-web {
+        grid-template-rows: 40vh 135vh;
+    }
+    .basic-ux {
+        grid-template-rows: 85vh 40vh 135vh 80vh 135vh;
+        grid-template-areas: ". uxside datatext datatext dataside ." ". . protphoto protphoto protside ." ". . prottext prottext protside ." ". . sprintphoto sprintphoto sprintside ." ". . sprinttext sprinttext sprintside .";
+    }
+    .animation {
+        grid-template-rows: 40vh 120vh 85vh 140vh 40vh 175vh;
+    }
+    .basic-content {
+        grid-template-rows: 40vh 150vh;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .side {
+        font-size: 1.5em;
+    }
+    .header-logo {
+        display: none;
     }
 }
