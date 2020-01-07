@@ -1,11 +1,18 @@
-/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 375px) {
+    .header {
+        font-size: 2em!important;
+    }
+    .side {
+        font-size: 1.5em!important;
+    }
+}
 
 @media only screen and (max-width: 600px) {
     #menuToggle {
         right: 1.5em;
     }
     #menu {
-        width: 20em;
+        width: 15em;
     }
     /* Landing */
     .header-landing {
@@ -35,7 +42,7 @@
     .introduction {
         padding: 0;
         grid-template-columns: auto 95vw auto;
-        grid-template-rows: 80vh 80vh;
+        grid-template-rows: 80vh auto;
         grid-template-areas: ". introphoto ." ". intro .";
     }
     .intro-photo {
@@ -67,27 +74,23 @@
     }
     .basic-web {
         grid-template-columns: 1em 90vw 1em;
-        grid-template-rows: 10vh 40vh 10vh 190vh;
+        grid-template-rows: 10vh 40vh 10vh auto;
         grid-template-areas: ". basicside ." ". basicphoto ." ". webside ." ". basictext .";
     }
     .basic-ux {
         grid-template-columns: 1em 90vw 1em;
-        grid-template-rows: 10vh 10vh 125vh 40vh 10vh 180vh 80vh 10vh 180vh;
+        grid-template-rows: 10vh 10vh auto 40vh 10vh auto 80vh 10vh auto;
         grid-template-areas: ". uxside ." ". dataside ." ". datatext ." ". protphoto ." ". protside ." ". prottext ." ". sprintphoto ." ". sprintside ." ". sprinttext .";
     }
     .animation {
         grid-template-columns: 1em 90vw 1em;
-        grid-template-rows: 10vh 40vh 10vh 175vh 10vh 110vh 10vh 10vh 200vh 40vh 10vh 255vh;
+        grid-template-rows: 10vh 40vh 10vh auto 10vh auto 10vh 10vh auto 40vh 10vh auto;
         grid-template-areas: ". animationside ." ". spritephoto ." ". spriteside ." ". spritetext ." ". jsside ." ". jstext ." ". pooloneside ." ". pooltwoside ." ". pooltext ." ". onboardingphoto ." ". onboardingside ." ". onboardingtext .";
     }
     .basic-content {
         grid-template-columns: 1em 90vw 1em;
-        grid-template-rows: 10vh 40vh 10vh 230vh;
+        grid-template-rows: 10vh 40vh 10vh auto;
         grid-template-areas: ". contentside ." ". foodsharingphoto ." ". foodsharingside ." ". foodsharingtext .";
-    }
-    #menu {
-        transform: translate(100%, 0);
-        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
     }
 }
 

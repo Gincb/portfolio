@@ -1,5 +1,6 @@
 body {
     overflow-x: hidden;
+    position: relative;
 }
 
 a {
@@ -8,12 +9,13 @@ a {
 }
 
 .logo {
-    width: 7.5em;
+    margin: auto;
+    width: 6em;
 }
 
 #menuToggle {
     position: absolute;
-    top: 2em;
+    top: 1em;
     right: 2em;
     z-index: 1;
 }
@@ -67,7 +69,7 @@ a {
 #menu {
     position: absolute;
     margin: -100px 0 0 0;
-    padding: 150px 50px 0 0;
+    padding: 150px 80px 0 0;
     width: 12em;
     height: 100vh;
     right: -100px;
@@ -76,8 +78,8 @@ a {
     text-align: center;
     transform-origin: 0% 0%;
     transform: translate(100%, 0);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-    box-shadow: 8px 0 6px -6px #b8b8b8;
+    transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    box-shadow: inset 7px 0 9px -13px #00000066;
 }
 
 #menu li {
@@ -88,4 +90,8 @@ a {
 #menuToggle input:checked~ul {
     transform: scale(1.0, 1.0);
     opacity: 1;
+}
+
+.display {
+    display: none;
 }

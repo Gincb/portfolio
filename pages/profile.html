@@ -12,7 +12,7 @@
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/burgermenu.css" rel="stylesheet">
     <link href="../css/responsive.css" rel="stylesheet">
-    <title>Portfolio</title>
+    <title>Profile</title>
 </head>
 
 <body>
@@ -24,20 +24,20 @@
                 <span></span>
                 <span></span>
                 <ul id="menu">
-                    <img class="logo" src="../icons/CL-black-2.svg" alt="">
-                    <a class="link-highlight2" href="../index.html">
-                        <li>Home</li>
-                    </a>
-                    <a class="link-highlight2" href="#">
-                        <li>About me</li>
-                    </a>
-                    <a class="link-highlight2" href="portfolio.html">
-                        <li>Portfolio</li>
-                    </a>
+                    <li class="logo"><img src="../icons/CL-black-2.svg" alt=""></li>
+                    <li><a class="link-highlight2" href="../index.html">
+                        Home
+                    </a></li>
+                    <li><a class="link-highlight2" href="profile.html">
+                        About me
+                    </a></li>
+                    <li><a class="link-highlight2" href="portfolio.html">
+                        Portfolio
+                    </a></li>
                 </ul>
             </div>
         </nav>
-        <h1 class="header">Nice to meet you, </br> <span class="border">this</span> is me</h1>
+        <h1 class="header">Nice to meet you, <br> <span class="border">this</span> is me</h1>
     </main>
 
     <article class="introduction">
@@ -46,12 +46,24 @@
         </section>
         <section class="intro-photo"></section>
         <section class="intro text">
-            <h2>Gintarė/</br>Bespalovaitė/</br>Colorless</br>
+            <h2>Gintarė/<br>Bespalovaitė/<br>Colorless<br>
             </h2>
-            <p>Aspiring Front-end developer </br> Passionate and proactive can-doer</p>
+            <p>Aspiring Front-end developer <br> Passionate and proactive can-doer<br> 1st year MMD student at KEA</p>
         </section>
 
     </article>
+
+    <button onclick="scrollToTop()" id="button" title="Go to top">
+        <svg class="triangle" width="30px" height="25px" viewBox="0 0 400 300">
+ 
+            <path 
+                  d="M 400 400 L 10 400 L 200 10 z"
+                 />
+           
+          </svg><br>
+          Top
+    </button>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>
