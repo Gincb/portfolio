@@ -132,7 +132,7 @@ nav {
     width: 0;
     height: 3px;
     background: #2c2c2c;
-    transition: width 0.5s;
+    transition: width 0.3s;
 }
 
 .link-highlight:hover::after {
@@ -141,6 +141,10 @@ nav {
 
 .link-highlight2:hover::after {
     width: 50%;
+}
+
+.link-highlight3 {
+    border-bottom: 3px #2c2c2c solid;
 }
 
 .grid-bottom-border {
